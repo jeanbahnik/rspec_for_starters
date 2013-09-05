@@ -3,28 +3,27 @@
 == Getting Started
 
 1. From the terminal, clone the repository:
-      <tt>git clone git@github.com:jeanbahnik/rspec_for_starters.git</tt>
+      git clone git@github.com:jeanbahnik/rspec_for_starters.git
 
 2. Switch to application folder:
-      <tt>cd rspec_for_starters</tt>
+      cd rspec_for_starters
 
 3. Bundle
-      <tt>bundle install</tt>
+      bundle install
 
 4. Seed the database
-      <tt>rake db:seed</tt>
+      rake db:seed
 
 5. Test if rspec works:
-      <tt>rspec spec --color</tt>
-    You should see a passing test:
-      <tt>
+      rspec spec --color
+   You should see a passing test:
+
       .
       Finished in 0.08168 seconds
       1 example, 0 failures
-      </tt>
 
 6. Start the application
-      <tt>rails server</tt>
+      rails server
 
 7. Go to http://localhost:3000/ and you'll see:
        "Hello!"
