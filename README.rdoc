@@ -11,19 +11,16 @@
 3. Bundle
       bundle install
 
-4. Seed the database
-      rake db:seed
-
-5. Test if rspec works:
+4. Test if rspec works:
       rspec spec --color
-   You should see a passing test:
 
+   You should see a passing test:
       .
       Finished in 0.08168 seconds
       1 example, 0 failures
 
-6. Start the application
+5. Start the application
       rails server
 
-7. Go to http://localhost:3000/ and you'll see:
+6. Go to http://localhost:3000/ and you'll see:
        "Hello!"
