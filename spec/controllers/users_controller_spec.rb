@@ -21,11 +21,21 @@ describe UsersController do
 
   describe '#update' do
     it "redirects to the user show on a successful udpate" do
-      put :update, :user => {:first_name => 'El Jefe', :last_name => "teacher man"}
-
       @user.should_receive(:update_attributes).and_return(true)
+      params = {:id => '1', :user => {:first_name => 'El Jefe', :last_name => "teacher man"}}
+
+      put :update, params
 
       response.should redirect_to(user_path)
+    end
+
+    it "re-renders the edit view on a failed update" do
+      @user.should_receive(:update_attributes).and_return(false)
+      params = {:id => '1', :user => {:first_name => 'El Jefe', :last_name => "teacher man"}}
+
+      put :update, params
+
+      response.should render_template('edit')
     end
   end
 end

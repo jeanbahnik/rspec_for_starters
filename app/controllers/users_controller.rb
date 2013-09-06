@@ -10,6 +10,8 @@ class UsersController < ApplicationController
 
     if @user.update_attributes(params[:user])
       redirect_to(user_path)
+    else
+      render :action => 'edit'
     end
   end
 
