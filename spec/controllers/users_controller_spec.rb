@@ -21,9 +21,9 @@ describe UsersController do
 
   describe '#update' do
     it "redirects to the user show on a successful udpate" do
-      @user.should_receive(:update_attributes).and_return(true)
-
       put :update, :user => {:first_name => 'El Jefe', :last_name => "teacher man"}
+
+      @user.should_receive(:update_attributes).and_return(true)
 
       response.should redirect_to(user_path)
     end
